@@ -1,0 +1,11 @@
+{
+    "total_spent": 15346.0,
+    "category_totals": {
+        "Food": 2480.0,
+        "Travel": 2320.0,
+        "Shopping": 5498.0,
+        "Bills": 3608.0,
+        "Health": 1440.0
+    },
+    "is_over_budget": true
+}

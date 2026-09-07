@@ -1,0 +1,35 @@
+2026-09-07 16:22:25,092 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-07 16:22:25,094 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-07 16:22:25,095 - INFO - Execution of  parse_transaction took 0.0008198000723496079 seconds.
+2026-09-07 16:22:25,095 - INFO - Execution of  generate_summary took 0.0016500999918207526 seconds.
+2026-09-07 16:22:25,096 - INFO - Data written to data\summary.json
+2026-09-07 16:22:34,335 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-07 16:22:34,336 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-07 16:22:34,336 - INFO - Execution of  parse_transaction took 0.000748799997381866 seconds.
+2026-09-07 16:22:34,337 - INFO - Execution of  generate_summary took 0.0012877000262960792 seconds.
+2026-09-07 16:22:34,338 - INFO - Data written to data\summary.json
+2026-09-07 16:22:35,743 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-07 16:22:35,744 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-07 16:22:35,745 - INFO - Execution of  parse_transaction took 0.0007551999296993017 seconds.
+2026-09-07 16:22:35,745 - INFO - Execution of  generate_summary took 0.0010379999876022339 seconds.
+2026-09-07 16:22:35,746 - INFO - Data written to data\summary.json
+2026-09-07 16:29:39,801 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-07 16:29:39,802 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-07 16:29:39,802 - INFO - Execution of  parse_transaction took 0.0006347000598907471 seconds.
+2026-09-07 16:29:39,802 - INFO - Execution of  generate_summary took 0.0008294000290334225 seconds.
+2026-09-07 16:29:39,803 - INFO - Data written to data\summary.json
+2026-09-07 16:30:27,085 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-07 16:30:27,086 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-07 16:30:27,087 - INFO - Execution of  parse_transaction took 0.000797900022007525 seconds.
+2026-09-07 16:30:27,087 - INFO - Execution of  generate_summary took 0.001055200002156198 seconds.
+2026-09-07 16:30:27,087 - INFO - Data written to data\summary.json
+2026-09-07 16:38:40,320 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-07 16:38:40,321 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-07 16:38:40,321 - INFO - Execution of  parse_transaction took 0.0007247000467032194 seconds.
+2026-09-07 16:38:40,322 - INFO - Execution of  generate_summary took 0.0010167000582441688 seconds.
+2026-09-07 16:38:40,322 - INFO - Data written to data\summary.json
+2026-09-07 17:00:02,291 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-07 17:00:02,292 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-07 17:00:02,292 - INFO - Execution of  parse_transaction took 0.0007820000173524022 seconds.
+2026-09-07 17:00:02,292 - INFO - Execution of  generate_summary took 0.0010708000045269728 seconds.
+2026-09-07 17:00:02,293 - INFO - Data written to data\summary.json
