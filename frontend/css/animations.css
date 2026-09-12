@@ -1,0 +1,33 @@
+/* Subtle Micro-Animations */
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 12px rgba(239, 68, 68, 0.25);
+    }
+    50% {
+        box-shadow: 0 0 24px rgba(239, 68, 68, 0.55);
+    }
+}
+
+.budget-banner.danger {
+    animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.kpi-card, .chart-card, .table-card {
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.toast {
+    animation: fadeIn 0.25s ease-out forwards;
+}

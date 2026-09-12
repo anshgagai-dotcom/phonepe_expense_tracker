@@ -33,3 +33,123 @@
 2026-09-07 17:00:02,292 - INFO - Execution of  parse_transaction took 0.0007820000173524022 seconds.
 2026-09-07 17:00:02,292 - INFO - Execution of  generate_summary took 0.0010708000045269728 seconds.
 2026-09-07 17:00:02,293 - INFO - Data written to data\summary.json
+2026-09-12 09:40:05,083 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 09:40:05,086 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-12 09:40:05,086 - INFO - Execution of  parse_transaction took 0.0014395999896805733 seconds.
+2026-09-12 09:40:05,086 - INFO - Execution of  generate_summary took 0.0016347999917343259 seconds.
+2026-09-12 09:40:05,087 - INFO - Data written to data\summary.json
+2026-09-12 12:51:38,641 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 12:51:38,643 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-12 12:51:38,643 - INFO - Execution of  parse_transaction took 0.0013549000141210854 seconds.
+2026-09-12 12:51:38,644 - INFO - Execution of  generate_summary took 0.0016354999970644712 seconds.
+2026-09-12 12:51:38,644 - INFO - Data written to data\summary.json
+2026-09-12 13:04:00,523 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 13:04:00,523 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-12 13:04:00,524 - INFO - Execution of  parse_transaction took 0.0007176999934017658 seconds.
+2026-09-12 13:04:00,524 - INFO - Execution of  generate_summary took 0.000966899999184534 seconds.
+2026-09-12 13:04:00,525 - INFO - Data written to data\summary.json
+2026-09-12 13:04:08,625 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 13:04:08,626 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-12 13:04:08,626 - INFO - Execution of  parse_transaction took 0.000890900002559647 seconds.
+2026-09-12 13:04:08,627 - INFO - Execution of  generate_summary took 0.0011394000030122697 seconds.
+2026-09-12 13:04:08,628 - INFO - Data written to data\summary.json
+2026-09-12 13:04:26,821 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 13:04:26,821 - ERROR - Skipped 8 transaction due to error: not enough values to unpack (expected 3, got 2)
+2026-09-12 13:04:26,821 - INFO - Execution of  parse_transaction took 0.0005682000191882253 seconds.
+2026-09-12 13:04:26,822 - INFO - Execution of  generate_summary took 0.0008175999973900616 seconds.
+2026-09-12 13:04:26,822 - INFO - Data written to data\summary.json
+2026-09-12 13:41:19,925 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 13:41:19,926 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 13:41:19,926 - INFO - Execution of parse_transactions_from_lines took 0.000419 seconds.
+2026-09-12 13:41:19,926 - INFO - Execution of parse_transactions took 0.000837 seconds.
+2026-09-12 13:41:19,926 - INFO - Execution of generate_summary took 0.001070 seconds.
+2026-09-12 13:41:19,927 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 13:41:37,840 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 13:41:37,841 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 13:41:37,841 - INFO - Execution of parse_transactions_from_lines took 0.000449 seconds.
+2026-09-12 13:41:37,841 - INFO - Execution of parse_transactions took 0.000923 seconds.
+2026-09-12 13:41:37,842 - INFO - Execution of generate_summary took 0.001160 seconds.
+2026-09-12 13:41:37,842 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 13:43:57,341 - INFO - Running headless system verification...
+2026-09-12 13:43:57,341 - INFO - Loading initial transaction dataset from: D:\phonepe_expense_tracker\data\transactions.txt
+2026-09-12 13:43:57,342 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 13:43:57,342 - INFO - Execution of parse_transactions_from_lines took 0.000489 seconds.
+2026-09-12 13:43:57,342 - INFO - Execution of generate_summary took 0.000084 seconds.
+2026-09-12 13:43:57,343 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 13:43:57,345 - INFO - All headless automated verifications PASSED with 100% accuracy!
+2026-09-12 13:56:20,811 - INFO - Initializing PhonePe Desktop window...
+2026-09-12 13:56:26,789 - INFO - Loading initial transaction dataset from: D:\phonepe_expense_tracker\data\transactions.txt
+2026-09-12 13:56:26,791 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 13:56:26,792 - INFO - Execution of parse_transactions_from_lines took 0.000669 seconds.
+2026-09-12 13:56:26,794 - INFO - Execution of generate_summary took 0.000095 seconds.
+2026-09-12 13:56:26,795 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:17:01,665 - INFO - Running headless system verification...
+2026-09-12 14:17:01,671 - INFO - Loading initial transaction dataset from: D:\phonepe_expense_tracker\data\transactions.txt
+2026-09-12 14:17:01,677 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:17:01,679 - INFO - Execution of parse_transactions_from_lines took 0.002755 seconds.
+2026-09-12 14:17:01,680 - INFO - Execution of generate_summary took 0.000287 seconds.
+2026-09-12 14:17:01,691 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:17:01,695 - INFO - All headless automated verifications PASSED with 100% accuracy!
+2026-09-12 14:20:02,818 - INFO - Initializing PhonePe Desktop window...
+2026-09-12 14:20:05,479 - INFO - Loading initial transaction dataset from: D:\phonepe_expense_tracker\data\transactions.txt
+2026-09-12 14:20:05,480 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:20:05,481 - INFO - Execution of parse_transactions_from_lines took 0.001215 seconds.
+2026-09-12 14:20:05,481 - INFO - Execution of generate_summary took 0.000093 seconds.
+2026-09-12 14:20:05,482 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:28:05,764 - INFO - Running headless system verification...
+2026-09-12 14:28:05,764 - INFO - Loading initial transaction dataset from: D:\phonepe_expense_tracker\data\transactions.txt
+2026-09-12 14:28:05,765 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:28:05,766 - INFO - Execution of parse_transactions_from_lines took 0.000511 seconds.
+2026-09-12 14:28:05,766 - INFO - Execution of generate_summary took 0.000104 seconds.
+2026-09-12 14:28:05,767 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:28:05,768 - INFO - All headless automated verifications PASSED with 100% accuracy!
+2026-09-12 14:28:38,793 - INFO - Initializing PhonePe Desktop window...
+2026-09-12 14:28:41,277 - INFO - Loading initial transaction dataset from: D:\phonepe_expense_tracker\data\transactions.txt
+2026-09-12 14:28:41,279 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:28:41,280 - INFO - Execution of parse_transactions_from_lines took 0.001430 seconds.
+2026-09-12 14:28:41,281 - INFO - Execution of generate_summary took 0.000102 seconds.
+2026-09-12 14:28:41,282 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:29:33,230 - INFO - User selected file via native dialog: C:\Users\DELLL\Downloads\transactions.txt
+2026-09-12 14:29:33,233 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:29:33,237 - INFO - Execution of parse_transactions_from_lines took 0.003620 seconds.
+2026-09-12 14:29:33,239 - INFO - Execution of generate_summary took 0.000088 seconds.
+2026-09-12 14:29:33,242 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:41:59,561 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 14:41:59,562 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:41:59,563 - INFO - Execution of parse_transactions_from_lines took 0.000722 seconds.
+2026-09-12 14:41:59,563 - INFO - Execution of parse_transactions took 0.001795 seconds.
+2026-09-12 14:41:59,564 - INFO - Execution of generate_summary took 0.002142 seconds.
+2026-09-12 14:41:59,565 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:42:22,797 - INFO - Running headless system verification...
+2026-09-12 14:42:22,798 - INFO - Loading initial transaction dataset from: data\transactions.txt
+2026-09-12 14:42:22,798 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:42:22,799 - INFO - Execution of parse_transactions_from_lines took 0.000547 seconds.
+2026-09-12 14:42:22,799 - INFO - Execution of generate_summary took 0.000079 seconds.
+2026-09-12 14:42:22,800 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:42:22,801 - INFO - All headless automated verifications PASSED with 100% accuracy!
+2026-09-12 14:45:59,127 - INFO - Running headless system verification...
+2026-09-12 14:45:59,127 - INFO - Loading initial transaction dataset from: data\transactions.txt
+2026-09-12 14:45:59,128 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:45:59,128 - INFO - Execution of parse_transactions_from_lines took 0.000478 seconds.
+2026-09-12 14:45:59,128 - INFO - Execution of generate_summary took 0.000074 seconds.
+2026-09-12 14:45:59,129 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:45:59,130 - INFO - All headless automated verifications PASSED with 100% accuracy!
+2026-09-12 14:46:05,407 - INFO - Initializing PhonePe Expence Tracker....
+2026-09-12 14:46:05,408 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:46:05,408 - INFO - Execution of parse_transactions_from_lines took 0.000484 seconds.
+2026-09-12 14:46:05,408 - INFO - Execution of parse_transactions took 0.001118 seconds.
+2026-09-12 14:46:05,409 - INFO - Execution of generate_summary took 0.001358 seconds.
+2026-09-12 14:46:05,410 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:48:39,172 - INFO - Running headless system verification...
+2026-09-12 14:48:39,172 - INFO - Loading initial transaction dataset from: data\transactions.txt
+2026-09-12 14:48:39,173 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 14:48:39,174 - INFO - Execution of parse_transactions_from_lines took 0.000484 seconds.
+2026-09-12 14:48:39,174 - INFO - Execution of generate_summary took 0.000084 seconds.
+2026-09-12 14:48:39,175 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json
+2026-09-12 14:48:39,177 - INFO - All headless automated verifications PASSED with 100% accuracy!
+2026-09-12 15:02:39,770 - INFO - Initializing PhonePe Desktop window...
+2026-09-12 15:02:42,601 - INFO - Loading initial transaction dataset from: data\transactions.txt
+2026-09-12 15:02:42,609 - WARNING - Skipped line 9: Expected 3 comma-separated values (Date, Merchant, Amount), found 2
+2026-09-12 15:02:42,616 - INFO - Execution of parse_transactions_from_lines took 0.006607 seconds.
+2026-09-12 15:02:42,617 - INFO - Execution of generate_summary took 0.000094 seconds.
+2026-09-12 15:02:42,618 - INFO - Data successfully written to D:\phonepe_expense_tracker\data\summary.json

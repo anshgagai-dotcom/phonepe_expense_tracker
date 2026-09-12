@@ -1,0 +1,58 @@
+:root {
+    /* Brand Colors - PhonePe Inspired */
+    --brand-primary: #5F259F;
+    --brand-primary-light: #7B2CBF;
+    --brand-primary-hover: #4D1D82;
+    --brand-accent: #9D4EDD;
+    --brand-glow: rgba(95, 37, 159, 0.35);
+
+    /* UI Dark Backgrounds & Glassmorphism */
+    --bg-base: #0B0F19;
+    --bg-surface: #111827;
+    --bg-card: rgba(17, 24, 39, 0.75);
+    --bg-card-hover: rgba(24, 33, 53, 0.85);
+    --bg-elevated: #1F2937;
+    --bg-input: rgba(15, 23, 42, 0.8);
+
+    /* Borders & Dividers */
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-light: rgba(255, 255, 255, 0.15);
+    --border-focus: #7B2CBF;
+
+    /* Typography Colors */
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --text-inverse: #0B0F19;
+
+    /* Semantic Status Colors */
+    --status-success: #10B981;
+    --status-success-bg: rgba(16, 185, 129, 0.12);
+    --status-warning: #F59E0B;
+    --status-warning-bg: rgba(245, 158, 11, 0.12);
+    --status-danger: #EF4444;
+    --status-danger-bg: rgba(239, 68, 68, 0.15);
+    --status-danger-glow: rgba(239, 68, 68, 0.3);
+
+    /* Category Palette */
+    --cat-shopping: #8E44AD;
+    --cat-bills: #2980B9;
+    --cat-food: #E67E22;
+    --cat-travel: #16A085;
+    --cat-health: #27AE60;
+    --cat-other: #7F8C8D;
+
+    /* Shadows & Radii */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
+    --shadow-glow: 0 0 20px var(--brand-glow);
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

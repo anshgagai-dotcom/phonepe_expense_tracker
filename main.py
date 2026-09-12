@@ -1,6 +1,13 @@
-from src.utils.logger import setup_logger
-from src.services.tracker import ExpenseTrackerService
-from src.config.setting import BUDGET_LIMIT
+import sys
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
+from backend.utils.logger import setup_logger
+from backend.services.tracker import ExpenseTrackerService
+from backend.config.setting import BUDGET_LIMIT
 
 
 def main():

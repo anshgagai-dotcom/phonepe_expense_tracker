@@ -7,5 +7,8 @@
         "Bills": 3608.0,
         "Health": 1440.0
     },
-    "is_over_budget": true
+    "is_over_budget": true,
+    "budget_limit": 10000.0,
+    "daily_average": 639.42,
+    "top_category": "Shopping"
 }

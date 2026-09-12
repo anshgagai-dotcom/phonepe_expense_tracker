@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhonePe Expense Tracker - Desktop Analytics</title>
+    <!-- Modern Geometric Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/phonepe_logo.png">
+
+    <!-- CSS Modules -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Offline Self-Contained Chart.js -->
+    <script src="assets/vendor/chart.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- App Header -->
+        <header class="app-header">
+            <div class="brand-section">
+                <div class="brand-logo-badge">
+                    <img src="assets/icons/phonepe_logo.png" alt="PhonePe Logo" class="brand-logo-img">
+                </div>
+                <div class="brand-titles">
+                    <h1>PhonePe Expense Tracker <span class="brand-tag">Desktop</span> <span class="company-badge">By Dr. ARG Company</span></h1>
+                    <p>FinTech Analytics & Statement Inspector &bull; Engineered by <strong class="company-highlight">Dr. ARG Company</strong></p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button id="btn-about" class="btn btn-secondary" title="About Dr. ARG Company & License">
+                    <span>⚡ About</span>
+                </button>
+                <button id="btn-edit-budget" class="btn btn-secondary" title="Configure Monthly Budget">
+                    <span>⚙️ Budget Limit</span>
+                </button>
+                <button id="btn-load-sample" class="btn btn-secondary" title="Reset to Sample Dataset">
+                    <span>🔄 Load Sample</span>
+                </button>
+                <button id="btn-select-file" class="btn btn-primary" title="Open Native Windows File Picker">
+                    <span>📁 Choose Statement (.txt)</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Drag & Drop / File Ingestion Zone -->
+        <section id="upload-dropzone" class="upload-dropzone">
+            <div class="dropzone-left">
+                <div class="dropzone-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="17 8 12 3 7 8"></polyline>
+                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                    </svg>
+                </div>
+                <div class="dropzone-text">
+                    <h3>Drag & Drop your transactions.txt file here</h3>
+                    <p>Supports standard PhonePe export format (YYYY-MM-DD, Merchant, Amount) &bull; Or click to browse</p>
+                </div>
+            </div>
+            <div class="dropzone-right">
+                <span class="btn btn-ghost">Browse File</span>
+            </div>
+        </section>
+
+        <!-- Budget Health Alert Banner -->
+        <div id="budget-alert-banner" class="budget-banner danger" style="display: none;">
+            <!-- Dynamically populated -->
+        </div>
+
+        <!-- KPI Metrics Grid -->
+        <section class="kpi-grid">
+            <!-- 1. Total Spent -->
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-title">Total Money Spent</span>
+                    <div class="kpi-icon">💸</div>
+                </div>
+                <div id="kpi-total-spent" class="kpi-value">₹0.00</div>
+                <div class="kpi-subtext">Cumulative across statement</div>
+            </div>
+
+            <!-- 2. Budget Health -->
+            <div id="kpi-budget-card" class="kpi-card danger">
+                <div class="kpi-header">
+                    <span class="kpi-title">Budget Utilization</span>
+                    <div class="kpi-icon">🎯</div>
+                </div>
+                <div id="kpi-budget-value" class="kpi-value">0%</div>
+                <div class="progress-container">
+                    <div id="kpi-budget-progress" class="progress-bar danger" style="width: 0%;"></div>
+                </div>
+                <div id="kpi-budget-subtext" class="kpi-subtext">Calculating status...</div>
+            </div>
+
+            <!-- 3. Top Category -->
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-title">Top Expense Category</span>
+                    <div class="kpi-icon">🏷️</div>
+                </div>
+                <div id="kpi-top-category" class="kpi-value">None</div>
+                <div id="kpi-top-category-sub" class="kpi-subtext">0.00 spent</div>
+            </div>
+
+            <!-- 4. Daily Average Spend -->
+            <div class="kpi-card">
+                <div class="kpi-header">
+                    <span class="kpi-title">Daily Average Spend</span>
+                    <div class="kpi-icon">📊</div>
+                </div>
+                <div id="kpi-daily-avg" class="kpi-value">₹0.00</div>
+                <div id="kpi-total-txns" class="kpi-subtext">0 transactions recorded</div>
+            </div>
+        </section>
+
+        <!-- Analytics Visualizations Grid -->
+        <section class="analytics-grid">
+            <!-- Donut Chart: Category Breakdown -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h2 class="chart-title"><span>🍩</span> Category Breakdown</h2>
+                    <span style="font-size: 12px; color: var(--text-muted);">Click slice to filter</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="donutChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Area Chart: Spending Trend -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h2 class="chart-title"><span>📈</span> Spending Over Time</h2>
+                    <span style="font-size: 12px; color: var(--text-muted);">Daily vs Cumulative</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Quality Strip -->
+        <div id="quality-strip" class="quality-strip">
+            <div class="quality-left">
+                <span id="quality-filename" style="font-weight: 600;">File: transactions.txt</span>
+                <span id="quality-valid-badge" class="badge-pill badge-success">0 Valid Transactions</span>
+            </div>
+            <div class="quality-right">
+                <span id="quality-skipped-badge" class="badge-pill badge-warning" style="display: none;">0 Skipped Rows</span>
+            </div>
+        </div>
+
+        <!-- Transactions Table Section -->
+        <section class="table-card">
+            <div class="table-toolbar">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" placeholder="Search merchant, date, amount..." autocomplete="off">
+                </div>
+
+                <div id="category-pills" class="category-pills">
+                    <!-- Category pills populated by table.js -->
+                </div>
+
+                <button id="btn-export-csv" class="btn btn-secondary">
+                    <span>📥 Export CSV</span>
+                </button>
+            </div>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">#</th>
+                            <th id="sort-date" class="sortable" style="width: 140px;">Date <span class="sort-arrow">↕</span></th>
+                            <th id="sort-merchant" class="sortable">Merchant <span class="sort-arrow">↕</span></th>
+                            <th style="width: 160px;">Category</th>
+                            <th id="sort-amount" class="sortable" style="width: 160px; text-align: right;">Amount <span class="sort-arrow">↕</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactions-tbody">
+                        <!-- Populated by table.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Table Pagination & Count -->
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 8px;">
+                <span id="page-info" style="font-size: 13px; color: var(--text-secondary);">Showing 0 entries</span>
+                <div style="display: flex; gap: 8px;">
+                    <button id="page-prev" class="btn btn-secondary" style="padding: 6px 14px;" disabled>&larr; Previous</button>
+                    <button id="page-next" class="btn btn-secondary" style="padding: 6px 14px;">Next &rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Footer with Dr. ARG Company Branding & Copyrights -->
+        <footer class="app-footer">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <span class="footer-brand-icon">⚡</span>
+                    <strong>Dr. ARG Company</strong>
+                </div>
+                <p class="footer-copy">&copy; 2026 Dr. ARG Company. All rights reserved.</p>
+            </div>
+            <div class="footer-col footer-center">
+                <div class="footer-badge">
+                    <span>🔒</span>
+                    <span>100% Client-Side Privacy &bull; Zero Cloud Upload</span>
+                </div>
+            </div>
+            <div class="footer-col footer-right">
+                <span class="footer-note">PhonePe Expense Tracker Desktop &bull; v1.0.0</span>
+                <button id="btn-footer-about" class="btn-link">About Dr. ARG Company &amp; License</button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Budget Settings Modal -->
+    <div id="budget-modal" class="modal-overlay">
+        <div class="modal-card">
+            <h2 style="font-size: 18px;">Monthly Budget Configuration</h2>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+                Set your target monthly spending ceiling. The dashboard will recalculate your utilization metrics and over-budget warnings.
+            </p>
+            <div>
+                <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text-secondary);">
+                    Budget Limit (₹ INR)
+                </label>
+                <input type="number" id="input-budget-limit" class="font-mono" style="width: 100%; padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-light); background: var(--bg-input); color: white; font-size: 16px;" placeholder="e.g. 10000" min="100" step="500">
+            </div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button id="btn-close-budget" class="btn btn-secondary">Cancel</button>
+                <button id="btn-save-budget" class="btn btn-primary">Save Budget</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skipped Lines Diagnostics Modal -->
+    <div id="diag-modal" class="modal-overlay">
+        <div class="modal-card" style="max-width: 580px;">
+            <h2 style="font-size: 18px; color: #FCA5A5; display: flex; align-items: center; gap: 8px;">
+                <span>⚠️</span> Statement Parsing Diagnostics
+            </h2>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+                The following lines could not be parsed according to the expected format <code style="color: var(--brand-accent);">(YYYY-MM-DD, Merchant, Amount)</code> and were skipped:
+            </p>
+            <div id="diag-skipped-list" style="max-height: 280px; overflow-y: auto; padding-right: 4px;">
+                <!-- Populated dynamically -->
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                <button id="btn-close-diag" class="btn btn-secondary">Close Inspector</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Dr. ARG Company Modal -->
+    <div id="about-modal" class="modal-overlay">
+        <div class="modal-card" style="max-width: 500px; text-align: center;">
+            <div class="about-icon-wrapper">
+                <img src="assets/icons/phonepe_logo.png" alt="PhonePe Logo" class="about-logo-img">
+            </div>
+            <h2 style="font-size: 22px; margin-top: 4px;">PhonePe Expense Tracker</h2>
+            <div class="about-version">Version 1.0.0 &bull; Desktop Production Edition</div>
+            
+            <div class="about-company-box">
+                <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); font-weight: 700; margin-bottom: 4px;">Built &amp; Engineered By</div>
+                <div style="font-size: 19px; font-weight: 800; color: #C77DFF; letter-spacing: -0.01em;">Dr. ARG Company</div>
+                <p style="font-size: 13px; color: var(--text-secondary); margin-top: 6px; line-height: 1.5;">
+                    Specialized in high-performance financial intelligence tools, privacy-first statement analytics, and enterprise engineering solutions.
+                </p>
+            </div>
+
+            <div class="about-copyright-box">
+                <div style="font-size: 13px; font-weight: 700; color: var(--text-primary);">&copy; 2026 Dr. ARG Company. All rights reserved.</div>
+                <div style="font-size: 12px; color: var(--text-muted); margin-top: 4px;">
+                    Protected under domestic and international intellectual property and copyright laws.
+                </div>
+            </div>
+
+            <div style="display: flex; justify-content: center; margin-top: 4px;">
+                <button id="btn-close-about" class="btn btn-primary" style="min-width: 140px;">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container"></div>
+
+    <!-- Application Script Entrypoint -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
